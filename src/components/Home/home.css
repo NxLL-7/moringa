@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+.saira {
+    font-family: "Saira";
+}
+
+.home {
+    display: flex;
+    margin-top: 2.5rem;
+    /* background-color: red; */
+}
+
+.imgSize {
+    margin: 1rem 0.5rem;
+    /* background-color: rebeccapurple; */
+    align-self: center;
+}
+
+.rightBox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+.BTNs {
+    display: none;
+    justify-content: space-evenly;
+}
+
+.BTNs button {
+    border: 0;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 2px 4px 10px 2px black;
+    font-size: 1rem;
+    font-family: "Varela Round";
+    color: black;
+    background-color: rgb(255, 255, 255);
+
+    &:hover {
+        box-shadow: 2px 4px 10px 2px grey;
+        animation: jelly 0.5s ease-out forwards;
+        transform: scaleX(1);
+        cursor: pointer;
+    }
+
+}
+
+@keyframes jelly {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-4px);
+        /* Overshoot upward */
+    }
+
+    70% {
+        transform: translateY(1px);
+        /* Slight downward bounce */
+    }
+
+    100% {
+        transform: translateY(-2px);
+        /* Settle at original -2px */
+    }
+}
+
+.prodABT {
+    user-select: none;
+    text-align: justify;
+    margin: 0rem 0.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+    line-height: 20px;
+    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.509);
+    color: white;
+    font-family: "Saira";
+    border-radius: 1rem;
+}
+
+@media (max-width: 992px) {
+    .home {
+        display: flex;
+        margin-top: 0rem;
+        flex-direction: column;
+    }
+
+    .BTNs {
+        margin-top: -5px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    .prodABT {
+        padding: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        display: flex;
+        margin-top: 0rem;
+        flex-direction: column;
+    }
+
+    .BTNs {
+        margin-top: -5px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+
+    .prodABT {
+        margin: 0px 18px;
+        padding: 24px;
+        margin-top: -4px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .home {
+        display: flex;
+        margin-top: 0rem;
+        flex-direction: column;
+    }
+
+    .BTNs {
+        margin-top: -5px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    .prodABT {
+        margin: 0px 14px;
+        padding: 22px 14px;
+        margin-top: -4px;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+    }
+}

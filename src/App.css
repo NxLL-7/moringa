@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #212121;
+    background-image: url(../../../IMGs/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* body {
+    background-color: #4c956c;
+} */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+}
+
+/* Very small screens (max-width: 320px) */
+@media screen and (max-width: 320px) {
+    body {
+        background-size: cover;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+}

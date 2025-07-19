@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=My+Soul&display=swap');
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+}
+
+.my-soul-regular {
+    font-family: "My Soul", cursive;
+}
+
+/* .blur {
+    backdrop-filter: blur(2px);
+} */
+.noDec {
+    color: inherit;
+    text-decoration: none;
+}
+
+.NavBar {
+    user-select: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    border-bottom: 3px rgb(133, 133, 133) solid;
+
+}
+
+.navItems ul {
+    /* background-color: rebeccapurple; */
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    width: 650px;
+    font-family: "Varela Round";
+}
+
+.navItems ul li {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0 10px;
+    text-shadow: 0px 0px 4px white;
+    align-self: center;
+    cursor: pointer;
+}
+
+.usracc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navItems ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.navItems ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.navItems ul li:hover {
+    animation: jelly 0.4s ease-out forwards;
+}
+
+@keyframes jelly {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-4px);
+        /* Overshoot upward */
+    }
+
+    70% {
+        transform: translateY(1px);
+        /* Slight downward bounce */
+    }
+
+    100% {
+        transform: translateY(-2px);
+        /* Settle at original -2px */
+    }
+}
+
+.navItems {
+    align-self: center;
+}
+
+.user {
+    align-self: center;
+    font-size: 22px;
+    margin-right: 14px;
+    margin-top: 4px;
+    color: white;
+}
+
+.logoName {
+    margin: 10px;
+    font-family: "My Soul";
+    font-size: 22px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    align-self: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    margin-right: 14px;
+    align-self: center;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+#hamburger-toggle:checked~.navItems {
+    display: block;
+}
+
+#hamburger-toggle:checked~.hamburger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+#hamburger-toggle:checked~.hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-toggle:checked~.hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+/* Responsive Design with Media Queries */
+
+/* Tablets and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .NavBar {
+        flex-direction: row;
+        align-items: center;
+        padding: 6px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10001;
+
+    }
+
+    .navItems {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+    }
+
+    .navItems ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .navItems ul li {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .navItems ul li::after {
+        width: 50%;
+        left: 25%;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .logoName {
+        font-size: 24px;
+    }
+
+}
+
+/* Mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .navItems ul {
+        font-size: 16px;
+    }
+
+    .navItems ul li {
+        padding: 10px 0;
+    }
+
+    .user {
+        display: none;
+
+    }
+
+    .logoName {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        z-index: 10001;
+    }
+
+    .navItems {
+        top: 60px;
+        z-index: 9999;
+    }
+}
+
+/* Very small screens (max-width: 320px) */
+@media screen and (max-width: 320px) {
+    .navItems ul {
+        font-size: 14px;
+    }
+
+    .user {
+        display: none;
+
+    }
+
+    .logoName {
+        font-size: 26px;
+    }
+
+    .hamburger {
+        width: 24px;
+        height: 16px;
+    }
+
+    .hamburger span {
+        height: 2px;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 6px;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 12px;
+    }
+
+    #hamburger-toggle:checked~.hamburger span:nth-child(1) {
+        top: 6px;
+    }
+
+    #hamburger-toggle:checked~.hamburger span:nth-child(3) {
+        top: 6px;
+    }
+}
