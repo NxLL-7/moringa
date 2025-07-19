@@ -1,50 +1,50 @@
 {
   "slideIMG": [
     {
-      "src": "IMGs/image1.jpg",
+      "src": "/IMGs/image1.jpg",
       "alt": "IMG1"
     },
     {
-      "src": "IMGs/image2.jpg",
+      "src": "/IMGs/image2.jpg",
       "alt": "IMG1"
     },
     {
-      "src": "IMGs/image3.jpg",
+      "src": "/IMGs/image3.jpg",
       "alt": "IMG1"
     },
     {
-      "src": "IMGs/image4.jpg",
+      "src": "/IMGs/image4.jpg",
       "alt": "IMG1"
     },
     {
-      "src": "IMGs/image5.jpg",
+      "src": "/IMGs/image5.jpg",
       "alt": "IMG1"
     }
   ],
 
   "prodIMG": [
     {
-      "src": "IMGs/product1.png",
+      "src": "/IMGs/product1.png",
       "alt": "abc"
     },
     {
-      "src": "IMGs/product2.png",
+      "src": "/IMGs/product2.png",
       "alt": "abc"
     },
     {
-      "src": "IMGs/product3.png",
+      "src": "/IMGs/product3.png",
       "alt": "abc"
     },
     {
-      "src": "IMGs/product4.png",
+      "src": "/IMGs/product4.png",
       "alt": "abc"
     },
     {
-      "src": "IMGs/product5.png",
+      "src": "/IMGs/product5.png",
       "alt": "abc"
     },
     {
-      "src": "IMGs/product6.png",
+      "src": "/IMGs/product6.png",
       "alt": "abc"
     }
   ]
