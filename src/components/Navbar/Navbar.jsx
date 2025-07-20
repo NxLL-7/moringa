@@ -16,10 +16,10 @@ const Home = () => {
         </label>
         <div className="navItems">
           <ul id="menu">
-            <li className="usracc">
+            {/* <li className="usracc">
               <FaUserAlt />
               <sub>USER ACC</sub>
-            </li>
+            </li> */}
             <li>
               <Link to="/" className="noDec">
                 {" "}
