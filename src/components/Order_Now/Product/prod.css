@@ -16,8 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* background-color: royalblue; */
-    height: 420px;
+    height: 450px;
+
 }
 
 .prodIMG {
@@ -40,17 +40,29 @@
 
 .pordName,
 .prodPRICE {
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 .pordName {
     text-align: center;
+    margin-top: -1rem;
     font-size: 18px;
 }
 
 .prodPRICE {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+
 }
 
 .prodQUANITY {
@@ -61,7 +73,7 @@
     width: 450px;
     color: white;
 
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
 
 .a h1 {
@@ -129,7 +141,7 @@
     text-align: center;
     color: silver;
     font-family: monospace;
-    font-size: 32px;
+    font-size: 38px;
     padding: 0.2rem 0rem;
 }
 
@@ -152,7 +164,7 @@
 .text {
     display: inline-block;
     animation: scroll-left 30s linear infinite;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     letter-spacing: 2px;
 }
 

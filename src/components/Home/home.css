@@ -6,13 +6,11 @@
 
 .home {
     display: flex;
-    margin-top: 2.5rem;
-    /* background-color: red; */
+    flex-direction: column;
 }
 
 .imgSize {
     margin: 1rem 0.5rem;
-    /* background-color: rebeccapurple; */
     align-self: center;
 }
 
@@ -73,13 +71,14 @@
     text-align: justify;
     margin: 0rem 0.5rem;
     padding: 1rem 1.5rem;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 20px;
     backdrop-filter: blur(50px);
     background-color: rgba(0, 0, 0, 0.509);
     color: white;
     font-family: "Saira";
     border-radius: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 992px) {

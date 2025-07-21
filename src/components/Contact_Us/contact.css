@@ -1,7 +1,8 @@
 .contact-section {
+    /* background-color: #fff; */
     margin: 0rem 1rem;
     display: flex;
-    height: 540px;
+    height: 650px;
     flex-direction: column;
     justify-content: center;
     z-index: 1000;
@@ -21,7 +22,7 @@
 
 .contact-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 42px;
     color: silver;
     padding: 0rem;
     padding-top: 0.2em;
@@ -32,7 +33,7 @@
 .contact-description {
     text-align: center;
     color: silver;
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 0.2rem;
     font-family: "Winky Rough";
     letter-spacing: 0.2px;
@@ -42,12 +43,11 @@
 .form-group-container {
     margin-top: -1rem;
     gap: 1rem;
-    height: 320px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 input::placeholder,
@@ -55,11 +55,17 @@ textarea::placeholder {
     text-align: center;
 }
 
+.form-input:hover,
+textarea:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
 .form-input,
 .form-textarea {
     border: 1px solid #e5e7eb;
     display: flex;
-    padding: 0.8rem;
+    padding: 1rem 0rem;
     font-family: monospace;
     width: 42rem;
     background-color: rgba(255, 255, 255, 0.1);
@@ -70,7 +76,8 @@ textarea::placeholder {
 .form-input::placeholder,
 .form-textarea::placeholder,
 .form-textarea:focus-visible {
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-size: 16px;
     color: white;
 }
 
@@ -79,6 +86,7 @@ textarea::placeholder {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
     text-align: center;
+
 }
 
 .append {
@@ -86,10 +94,9 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     color: black;
     width: 100%;
-    height: 70px;
+    height: 100px;
     flex-direction: column;
 }
 
@@ -100,12 +107,15 @@ textarea::placeholder {
 }
 
 .cool-button {
-    padding: 8px 12px;
-    font-size: 16px;
+    padding: 10px 14px;
+    font-size: 18px;
+    font-family: "Libertinus Mono";
     font-weight: 600;
     color: white;
-    background: linear-gradient(135deg, #4ade80, #06b6d4);
-    border: none;
+    /* background: linear-gradient(135deg, #4ade80, #06b6d4); */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur (50px);
+    border: 1px solid #e5e7eb;
     border-radius: 1rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -115,7 +125,10 @@ textarea::placeholder {
 .cool-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #22c55e, #0ea5e9);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    color: black;
+    /* background: linear-gradient(135deg, #22c55e, #0ea5e9); */
 }
 
 .cool-button:active {
@@ -128,7 +141,7 @@ textarea::placeholder {
 
     .form-input,
     .form-textarea {
-        width: 18rem;
+        width: 28rem;
     }
 
     .contact-section {
@@ -137,14 +150,11 @@ textarea::placeholder {
     }
 
     .form-group-container {
-        height: 30rem;
+        height: 28rem;
         gap: 1rem;
         justify-content: space-around;
     }
 
-    /* .last {
-        margin-bottom: 1rem;
-    } */
 
     .cool-button {
         width: 60%;
@@ -158,12 +168,7 @@ textarea::placeholder {
 
 }
 
-/* Default styles (already provided) */
-/* ... your full original CSS remains unchanged above ... */
-
-/* Breakpoints below */
-
-/* For small devices (≤576px) */
+/* Mobile Devices */
 @media (max-width: 576px) {
     .contact-title {
         padding-top: 1rem;
@@ -171,7 +176,7 @@ textarea::placeholder {
     }
 
     .contact-description {
-        font-size: 14px;
+        font-size: 16px;
         padding: 0.6rem 0.8rem;
     }
 
@@ -179,7 +184,7 @@ textarea::placeholder {
     .form-textarea {
         font-size: 14px;
         padding: 0.6rem;
-        width: 100%;
+        width: 20rem;
     }
 
     .result {
@@ -190,86 +195,5 @@ textarea::placeholder {
     .form-group input,
     .form-textarea {
         padding: 1.5rem 0rem;
-    }
-
-    .cool-button {
-        width: 80%;
-    }
-}
-
-/* For medium devices (>576px and ≤768px) */
-@media (max-width: 768px) {
-
-    .form-input,
-    .form-textarea {
-        width: 90%;
-    }
-
-    .contact-title {
-        font-size: 30px;
-    }
-
-    .contact-description {
-        font-size: 15px;
-    }
-
-    .cool-button {
-        width: 70%;
-    }
-}
-
-/* For large devices (>768px and ≤992px) */
-@media (max-width: 992px) {
-
-    .form-input,
-    .form-textarea {
-        width: 18rem;
-    }
-
-    .contact-section {
-        height: 43.5rem;
-        padding: 1rem 0rem;
-    }
-
-    .form-group-container {
-        height: 30rem;
-        gap: 1rem;
-        justify-content: space-around;
-    }
-
-    .cool-button {
-        width: 60%;
-        padding: 12px 16px;
-    }
-
-    .form-group input,
-    .form-textarea {
-        padding: 1.5rem 0rem;
-    }
-}
-
-/* For extra large devices (>992px and ≤1200px) */
-@media (max-width: 1200px) {
-
-    .form-input,
-    .form-textarea {
-        width: 36rem;
-    }
-
-    .cool-button {
-        width: 50%;
-    }
-}
-
-/* For XXL devices (>1200px and ≤1400px) */
-@media (max-width: 1400px) {
-
-    .form-input,
-    .form-textarea {
-        width: 40rem;
-    }
-
-    .cool-button {
-        width: 40%;
     }
 }

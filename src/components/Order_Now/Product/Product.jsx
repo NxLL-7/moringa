@@ -43,13 +43,17 @@ const Product = () => {
               enim incidunt ut rem dolores eos magni! Inventore suscipit sit
               aliquid voluptas error!
             </div>
-            <div className="prodPRICE">₹123/-</div>
+            <div className="prices">
+              <div className="prodPRICE">100g: ₹123/-</div>or
+              <div className="prodPRICE">250g: ₹123/-</div>or
+              <div className="prodPRICE">500g: ₹123/-</div>
+            </div>
             <div className="prodQUANITY">
               <div className="r">
-                  <h1>QUANTITY</h1>
-                  <input type="checkbox" name="" id="1" />
-                  <input type="checkbox" name="" id="1" />
-                  <input type="checkbox" name="" id="1" />
+                <h1>QUANTITY</h1>
+                <input type="checkbox" name="" id="1" />
+                <input type="checkbox" name="" id="1" />
+                <input type="checkbox" name="" id="1" />
               </div>
               <div className="l">
                 <div className="a">

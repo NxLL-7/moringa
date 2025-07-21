@@ -2,12 +2,15 @@ import React from "react";
 import "./navbar.css";
 import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LOGO from "../../../public/IMGs/LOGO.png";
 
 const Home = () => {
   return (
     <section className="blur">
       <div className="NavBar">
-        <div className="logoName">Arav Brother's</div>
+        <div className="logoName">
+          <img src={LOGO} alt="logo" />
+        </div>
         <input type="checkbox" id="hamburger-toggle" />
         <label class="hamburger" for="hamburger-toggle">
           <span></span>
