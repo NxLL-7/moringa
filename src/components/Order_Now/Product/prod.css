@@ -40,40 +40,45 @@
 
 .pordName,
 .prodPRICE {
-    padding: 0.8rem;
+    padding: 0.65rem;
 }
 
-.pordName {
+.prodName {
     text-align: center;
-    margin-top: -1rem;
     font-size: 18px;
 }
 
 .prodPRICE {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
 
     background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #e5e7eb;
     backdrop-filter: blur(10px);
     border-radius: 2rem;
 }
 
+.prodPRICE:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
 .prices {
     display: flex;
-    justify-content: center;
-    margin-top: -1rem;
-
+    justify-content: space-evenly;
+    align-items: center;
+    width: 28rem;
 }
 
 .prodQUANITY {
+    margin-top: -1rem;
     display: flex;
+    flex-direction: column;
     align-self: center;
     align-items: center;
-    justify-content: space-between;
-    width: 450px;
+    justify-content: space-around;
+    height: 12rem;
     color: white;
-
-    /* background-color: rebeccapurple; */
 }
 
 .a h1 {
@@ -99,9 +104,8 @@
     border-radius: 1.5rem;
     height: 100px;
 
+    display: none;
 
-
-    background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(50px);
 }
 
@@ -113,8 +117,9 @@
     width: 150px;
     border-radius: 1.5rem;
 
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #e5e7eb;
+    backdrop-filter: blur(10px);
 }
 
 .inc,
@@ -127,9 +132,10 @@
     border-radius: 18px;
     font-size: 26px;
 
-    &:hover {
-        box-shadow: 0px 0px 10px white;
 
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px black;
     }
 }
 
@@ -179,17 +185,109 @@
 }
 
 
-/*
+@media (max-width: 992px) {
+    .down {
+        display: flex;
+        flex-direction: column;
+        height: 42rem;
+    }
 
-        <div className="prodPNT">
-          <p>
-            🌿 Nature’s Power in Every Spoon 💪 Boost Immunity, Naturally 🌱
-            Pure Health, Pure Life 🍃 Fuel Your Day the Organic Way 🌼 Strong
-            Inside, Fresh Outside ✅ Stay Fit, Stay Pure 🌞 Start Your Day with
-            Strength 🌿 Green Goodness, Daily Wellness 💚 Immunity You Can Trust
-            🛡️ Naturally Shield Your Health
-          </p>
-        </div>
+    .prodQUANITY {
+        margin-top: -2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 20rem;
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .down {
+        display: flex;
+        flex-direction: column;
+        height: 42rem;
+    }
+
+    .prodSHOP {
+        width: 22rem;
+        height: 24rem;
+    }
+
+    .prodQUANITY {
+        margin-top: -1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 20rem;
+        height: 14rem;
+    }
+
+    .prodName {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .prices {
+        display: flex;
+        justify-content: space-between;
+        width: 21rem;
+    }
+
+    .l {
+        width: 12rem;
+        height: 8rem;
+    }
+
+    .prodPRICE {
+        font-size: 14px;
+        padding: 0.56rem;
+    }
+}
 
 
-*/
+@media screen and (max-width: 480px) {
+    .down {
+        display: flex;
+        flex-direction: column;
+        height: 42rem;
+    }
+
+    .prodSHOP {
+        width: 22rem;
+        height: 24rem;
+    }
+
+    .prodName {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .prices {
+        display: flex;
+        justify-content: space-between;
+        width: 21rem;
+    }
+
+    .prodQUANITY {
+        margin-top: -1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 20rem;
+        height: 14rem;
+    }
+
+    .l {
+        width: 12rem;
+        height: 8rem;
+    }
+
+    .prodPRICE {
+        font-size: 14px;
+        padding: 0.56rem;
+    }
+}
+
+
+@media screen and (max-width: 320px) {}

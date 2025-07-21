@@ -71,24 +71,23 @@
 
 @media (max-width: 992px) {
     .carousel {
-        height: 408px;
-        width: 612px;
+        height: 302px;
+        width: 402px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .carousel {
-        height: 372px;
-        width: 508px;
+        height: 302px;
+        width: 408px;
     }
 }
 
 
 @media screen and (max-width: 480px) {
     .carousel {
-        height: 272px;
-        /* display: none; */
-        width: 392px;
+        height: 242px;
+        width: 334px;
     }
 }
 

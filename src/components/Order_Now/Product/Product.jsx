@@ -11,6 +11,7 @@ const Product = () => {
   let decreaseNUM = () => {
     setNum((num = num - 1));
   };
+
   return (
     <section>
       <div className="container">
@@ -38,17 +39,17 @@ const Product = () => {
             <Carousal2 data={prodIMG} />
           </div>
           <div className="prodSHOP">
-            <div className="pordName">
+            <div className="prodName">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               enim incidunt ut rem dolores eos magni! Inventore suscipit sit
               aliquid voluptas error!
             </div>
-            <div className="prices">
-              <div className="prodPRICE">100g: ₹123/-</div>or
-              <div className="prodPRICE">250g: ₹123/-</div>or
-              <div className="prodPRICE">500g: ₹123/-</div>
-            </div>
             <div className="prodQUANITY">
+              <div className="prices">
+                <div className="prodPRICE">100g: ₹123/-</div>or
+                <div className="prodPRICE">250g: ₹123/-</div>or
+                <div className="prodPRICE">500g: ₹123/-</div>
+              </div>
               <div className="r">
                 <h1>QUANTITY</h1>
                 <input type="checkbox" name="" id="1" />
