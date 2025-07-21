@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import LOGO from "../../../public/IMGs/LOGO.png";
+import LOGO from "/IMGs/Logo.png";
 
 const Home = () => {
   return (
