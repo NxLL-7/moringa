@@ -1,37 +1,47 @@
 import React, { useState } from "react";
 import "./contact.css";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [result, setResult] = useState("");
+  let isFilled;
 
   const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "93409f32-1429-4412-b7eb-07732c69eacf");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let msg = document.getElementById("message").value;
+    if (name === "" && email === "" && phone === "" && msg === "") {
+      isFilled = false;
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      isFilled = true;
     }
-  };
+    if (isFilled) {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
 
-  const clearInput = () => {
-    document.getElementById("name").textContent = "";
-    document.getElementById("email").textContent = "";
-    document.getElementById("phone").textContent = "";
-    document.getElementById("message").textContent = "";
+      formData.append("access_key", "93409f32-1429-4412-b7eb-07732c69eacf");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } else {
+      window.alert("Fill The Form !!");
+    }
   };
 
   return (
@@ -85,11 +95,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="append">
-              <button
-                class="form-submit cool-button"
-                type="submit"
-                onClick={clearInput}
-              >
+              <button class="form-submit cool-button" type="submit">
                 Send Message
               </button>
               <span
@@ -100,6 +106,28 @@ const Contact = () => {
               </span>
             </div>
           </form>
+          <div className="center">
+            <div className="social">
+              <div>
+                <Link
+                  to="https://www.facebook.com/profile.php?id=61578268003866"
+                  target="_blank"
+                  className="linkTag fb"
+                >
+                  <FaFacebookSquare />
+                </Link>
+              </div>
+              <div>
+                <Link
+                  to="https://www.instagram.com/moringa722/"
+                  target="_blank"
+                  className="linkTag ig"
+                >
+                  <FaSquareInstagram />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

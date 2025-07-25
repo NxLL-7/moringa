@@ -13,7 +13,11 @@ const Home = () => {
         </div>
         <div className="rightBox">
           <div className="BTNs">
-            <button>Order Now</button>
+            <button>
+              <Link to="/order" className="noDec">
+                Order Now
+              </Link>
+            </button>
             <button>
               <Link to="/about" className="noDec">
                 Read More

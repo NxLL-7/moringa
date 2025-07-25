@@ -29,16 +29,17 @@ const Home = () => {
                 HOME
               </Link>
             </li>
-            <li>
-              <Link to="/order" className="noDec">
-                {" "}
-                ORDER NOW
-              </Link>
-            </li>
+
             <li>
               <Link to="/about" className="noDec">
                 {" "}
                 ABOUT THE PRODUCT
+              </Link>
+            </li>
+            <li>
+              <Link to="/order" className="noDec">
+                {" "}
+                ORDER NOW
               </Link>
             </li>
             <li>
